@@ -4,11 +4,14 @@ import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { HrThin } from './components/styled/mixedIn';
 import { Div, Link } from './components/styled/shared';
 import Profile from './pages/profile';
-import './App.css';
 
 const Nav = styled(Div)`
-  & a:after {
-    margin: 10000;
+  & a::before {
+    padding-left: 5px;
+    content: '|';
+  }
+  & a:first-child::before {
+    content: '';
   }
 `;
 
@@ -40,7 +43,7 @@ const theme = {
 
 function App() {
   return (
-    <div className="App">
+    <React.Fragment>
       <GlobalStyle />
 
       <ThemeProvider theme={theme}>
@@ -60,7 +63,7 @@ function App() {
           </Switch>
         </Router>
       </ThemeProvider>
-    </div>
+    </React.Fragment>
   );
 }
 
