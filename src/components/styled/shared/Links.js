@@ -4,7 +4,7 @@ import { color } from '../Properties';
 import * as cs from '../CoreStyles';
 
 const defaultStyle = css`
-  text-decoration: ${(props) => props.textDecoration || 'none'}!important;
+  text-decoration: ${(props) => props.textDecoration || 'none'} !important;
 `;
 
 export const A = styled.a`

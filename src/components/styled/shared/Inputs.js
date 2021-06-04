@@ -1,8 +1,9 @@
 import styled, { css } from 'styled-components';
 import { color } from '../Properties';
 import { getValue } from '../Util';
+import { Input as input } from 'antd';
 
-const BasicInput = styled.input`
+const BasicInput = styled(input)`
   ${(props) =>
     props.width &&
     css`
@@ -24,6 +25,7 @@ const BasicInput = styled.input`
     outline: none;
   }
 `;
+
 //override
 export const Input = styled(BasicInput)`
   ${(props) => props.green && `border: 1px solid ${color.green}`}

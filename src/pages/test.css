@@ -1,0 +1,9 @@
+ul > li {
+  color: blue;
+  font-weight: bold;
+}
+
+#id li:first-child {
+  color: red;
+  font-style: italic;
+}

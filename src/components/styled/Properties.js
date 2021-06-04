@@ -6,8 +6,18 @@ export const color = {
   dark: '#929292', //Black 컬러의 보조 - 높은 가시성, 탭바 Normal상태의 텍스트
   black: '#000000', //기본 색상
   green: '#24855b', //키 컬러, 중요 버튼 및 엘리먼트에 적절히 사용, 버튼 pressed 상태
+  mint: '#00b894',
   adjust: '#929eb5', //키컬러의 보조컬러 역할
   danger: '#e44a4a',
+  peach: '#f3a683',
+  rosy: '#f7d794',
+  blue: '#0984e3',
+  purple: '#574b90',
+  pink: '#f8a5c2',
+  yellow: '#fffa65',
+  lemon: '#ffeaa7',
+  orange: '#e17055',
+  ice: '#c7ecee',
 };
 
 export const hoverColor = {

@@ -5,7 +5,7 @@ export const toRem = (num) => {
 };
 
 export const getValue = (value) => {
-  if (!isNaN(value) && value == 0) return value + 'px';
+  if (!isNaN(value) && value === 0) return value + 'px';
   if (!value) return null;
   if (isNaN(value)) return value;
   return toRem(value) + 'rem';

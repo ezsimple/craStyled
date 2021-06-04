@@ -72,8 +72,8 @@ export const notiNew = css`
   }
 `;
 
-// const flex = css`
-//     display: flex;
-//     justify-content: ${props => props.justifyContent};
-//     align-items: ${props => props.justifyContent};
-// `;
+export const flex = css`
+  display: flex;
+  justify-content: ${(props) => props.justifyContent};
+  align-items: ${(props) => props.justifyContent};
+`;

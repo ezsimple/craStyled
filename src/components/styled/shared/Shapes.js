@@ -1,8 +1,6 @@
-import styled, { css } from 'styled-components';
-import { color, activeColor } from '../Properties';
-import { Div } from './Layouts';
-import { getValue } from '../Util';
+import styled from 'styled-components';
 import * as cs from '../CoreStyles';
+import { color } from '../Properties';
 
 export const TriangleUp = styled.div`
   display: inline-block;

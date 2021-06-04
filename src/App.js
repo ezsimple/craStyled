@@ -3,18 +3,14 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { HrThin } from './components/styled/mixedIn';
 import { Div, Link } from './components/styled/shared';
+import Index from './pages/index';
 import Profile from './pages/profile';
 
-const Nav = styled(Div)`
-  & a::before {
-    padding-left: 5px;
-    content: '|';
-  }
-  & a:first-child::before {
-    content: '';
-  }
-`;
+import 'antd/dist/antd.css';
 
+// ---------------------------------------------------------
+// createGlobalStyle 에서 antd.css의 스타일을 변경할 수 있다.
+// ---------------------------------------------------------
 const GlobalStyle = createGlobalStyle`
   html{
     box-sizing: border-box;
@@ -35,6 +31,16 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+const Nav = styled(Div)`
+  & a::after {
+    padding-left: 5px;
+    content: '|';
+  }
+  & a:first-child::before {
+    content: '';
+  }
+`;
+
 const theme = {
   colors: {
     primary: '#fafafa',
@@ -45,7 +51,6 @@ function App() {
   return (
     <React.Fragment>
       <GlobalStyle />
-
       <ThemeProvider theme={theme}>
         <Router>
           <Nav>
@@ -58,7 +63,7 @@ function App() {
           </Nav>
           <HrThin />
           <Switch>
-            <Route exact path="/" component={this} />
+            <Route exact path="/" component={Index} />
             <Route exact path="/profile" component={Profile} />
           </Switch>
         </Router>

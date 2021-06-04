@@ -1,17 +1,12 @@
 import styled, { css } from 'styled-components';
-import { color, activeColor } from '../Properties';
+import { margin, noti, notiNew, padding } from '../CoreStyles';
+import { color } from '../Properties';
 import { getValue } from '../Util';
-import {
-  margin,
-  padding,
-  sticky,
-  fixed,
-  noti,
-  notiNew,
-  // pseudo,
-} from '../CoreStyles';
 
-const BasicButton = styled.button`
+import { Button as button } from 'antd';
+
+// Override
+const BasicButton = styled(button)`
   box-sizing: border-box;
   padding: 0 6px;
   height: 40px;
@@ -52,7 +47,7 @@ const BasicButton = styled.button`
       box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.07);
     `}
 
-    ${(props) => props.noti && noti};
+  ${(props) => props.noti && noti};
   ${(props) => props.notiNew && notiNew};
   ${/* pseudo.hover */ ''};
   ${/* pseudo.active */ ''};
@@ -69,6 +64,6 @@ export const Button = styled(BasicButton)`
       border: 0;
     `};
   &:focus {
-    outline: none;
+    outline: 0;
   }
 `;
