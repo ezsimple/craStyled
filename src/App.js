@@ -25,14 +25,14 @@ const GlobalStyle = createGlobalStyle`
   body{
     background-color:#fafafa;
     min-height:100vh;
-    padding: 1rem;
-    margin-top:0;
-    font-family:Verdana;
+    font-family: Verdana;
+    padding: 0;
+    margin: 0;
   }
 `;
 
 const Nav = styled(Div)`
-  & a::after {
+  & a::before {
     padding-left: 5px;
     content: '|';
   }
