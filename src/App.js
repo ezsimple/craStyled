@@ -5,6 +5,7 @@ import { HrThin } from './components/styled/mixedIn';
 import { Div, Link } from './components/styled/shared';
 import Index from './pages/index';
 import Profile from './pages/profile';
+import Video from './pages/video';
 
 import 'antd/dist/antd.css';
 
@@ -60,11 +61,15 @@ function App() {
             <Link bg="white" to="/profile">
               프로파일
             </Link>
+            <Link bg="white" to="/video">
+              비디오
+            </Link>
           </Nav>
           <HrThin />
           <Switch>
             <Route exact path="/" component={Index} />
             <Route exact path="/profile" component={Profile} />
+            <Route exact path="/video" component={Video} />
           </Switch>
         </Router>
       </ThemeProvider>

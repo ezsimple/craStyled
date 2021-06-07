@@ -7,9 +7,14 @@ const Index = () => {
       <p>첫페이지 입니다.</p>
       <Link to="/profile">
         <Button fg="white" bg="blue">
-          프로파일로 가볼까요?
+          프로파일
         </Button>
-        <Button type="ghost">이건</Button>
+      </Link>
+
+      <Link to="/video">
+        <Button fg="black" bg="lemon" bc="black">
+          비디오
+        </Button>
       </Link>
 
       <div>
